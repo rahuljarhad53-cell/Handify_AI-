@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Handify AI — Handwritten Assignments</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Patrick+Hand&family=Kalam:wght@300;400;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <a class="brand" href="#">
+      <span class="brand-icon">✍</span>
+      <span>Handify <b>AI</b></span>
+    </a>
+
+    <nav>
+      <a href="#workspace">Workspace</a>
+      <a href="#how-it-works">How it works</a>
+    </nav>
+
+    <a class="top-cta" href="#workspace">Create assignment ↗</a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow">✦ YOUR DIGITAL HANDWRITING STUDIO</div>
+
+        <h1>Your ideas.<br>
+          <span>Your handwriting style.</span>
+        </h1>
+
+        <p>
+          Turn assignment text into a neat handwritten-style page preview.
+          Customize the look, preview an A4 sheet, and print or save it as PDF.
+        </p>
+
+        <div class="hero-actions">
+          <a class="primary-btn" href="#workspace">Start writing →</a>
+          <span class="no-signup">✓ Free to try</span>
+        </div>
+
+        <div class="mini-stats">
+          <div><strong>3</strong><span>Handwriting styles</span></div>
+          <div><strong>A4</strong><span>Paper preview</span></div>
+          <div><strong>PDF</strong><span>Print / save</span></div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="floating-tag tag-one">✦ Handwriting preview</div>
+
+        <div class="paper hero-paper">
+          <div class="paper-top">
+            <span>COMPUTER SCIENCE</span>
+            <span>01</span>
+          </div>
+
+          <h3>Introduction to Artificial Intelligence</h3>
+
+          <p>
+            Artificial Intelligence is a branch of computer science
+            that focuses on building systems capable of learning
+            and solving problems.
+          </p>
+
+          <p>
+            AI is used in education, healthcare, transport,
+            and many other fields.
+          </p>
+
+          <div class="scribble">Learn • Create • Explore</div>
+        </div>
+
+        <div class="floating-tag tag-two">✍ Made for students</div>
+      </div>
+    </section>
+
+    <section class="workspace-section" id="workspace">
+      <div class="section-heading">
+        <div>
+          <div class="eyebrow">THE WORKSPACE</div>
+          <h2>Make your assignment</h2>
+          <p>Enter your content, personalize the page, and preview it instantly.</p>
+        </div>
+      </div>
+
+      <div class="app-grid">
+
+        <aside class="controls card">
+          <h3>✎ Assignment details</h3>
+
+          <label for="assignmentTitle">Assignment title</label>
+          <input id="assignmentTitle"
+                 value="Introduction to Artificial Intelligence"
+                 placeholder="Enter assignment title">
+
+          <label for="subject">Subject</label>
+          <select id="subject">
+            <option>Computer Science</option>
+            <option>Java Programming</option>
+            <option>Python Programming</option>
+            <option>DBMS</option>
+            <option>Artificial Intelligence</option>
+            <option>Computer Networks</option>
+            <option>Other</option>
+          </select>
+
+          <label for="studentName">Student name</label>
+          <input id="studentName" placeholder="Enter your name">
+
+          <label for="content">Assignment content</label>
+          <textarea id="content" rows="10">Artificial Intelligence (AI) is a branch of computer science that aims to create machines capable of performing tasks that usually require human intelligence.
+
+AI systems can learn from data, recognize patterns, solve problems, and understand language. Common examples include virtual assistants, recommendation systems, image recognition, and translation tools.
+
+AI is used in education to support learning, in healthcare to help analyze information, and in transport to improve navigation.
+
+In conclusion, Artificial Intelligence is an important technology with many practical applications. It should be developed and used responsibly.</textarea>
+
+          <div class="helper-row">
+            <span id="wordCount">0 words</span>
+            <span>Use your own notes</span>
+          </div>
+
+          <button class="secondary-btn full" id="sampleBtn" type="button">
+            ✦ Insert sample content
+          </button>
+
+          <hr>
+
+          <h3>⚙ Page appearance</h3>
+
+          <label for="handwriting">Handwriting style</label>
+          <select id="handwriting">
+            <option value="caveat">Style 1 — Flowing</option>
+            <option value="patrick">Style 2 — Simple</option>
+            <option value="kalam">Style 3 — Notebook</option>
+          </select>
+
+          <label for="fontSize">Text size</label>
+          <select id="fontSize">
+            <option value="18">Small</option>
+            <option value="21" selected>Medium</option>
+            <option value="24">Large</option>
+            <option value="27">Extra large</option>
+          </select>
+
+          <label for="lineSpacing">Line spacing</label>
+          <select id="lineSpacing">
+            <option value="1.35">Compact</option>
+            <option value="1.65" selected>Normal</option>
+            <option value="1.95">Wide</option>
+          </select>
+
+          <label for="paperStyle">Paper style</label>
+          <select id="paperStyle">
+            <option value="ruled">Ruled notebook</option>
+            <option value="plain">Plain white</option>
+            <option value="grid">Grid paper</option>
+          </select>
+
+          <button class="primary-btn full" id="updateBtn" type="button">
+            Update preview ↗
+          </button>
+
+          <button class="outline-btn full" id="printBtn" type="button">
+            Download / Print PDF ⤓
+          </button>
+
+          <p class="privacy-note">
+            Your text stays in this browser page. This demo does not send it to a server.
+          </p>
+        </aside>
+
+        <section class="preview-panel">
+          <div class="preview-toolbar">
+            <strong>🟢 Live preview — A4 paper</strong>
+            <button id="fullscreenBtn" class="icon-btn" type="button">
+              ⤢ Preview
+            </button>
+          </div>
+
+          <article class="paper assignment-paper ruled" id="paperPreview">
+            <div class="assignment-meta">
+              <span id="previewSubject">COMPUTER SCIENCE</span>
+              <span>PAGE 01</span>
+            </div>
+
+            <div class="student-line" id="previewStudent"></div>
+
+            <h2 id="previewTitle">Introduction to Artificial Intelligence</h2>
+
+            <div class="handwriting-content" id="previewContent"></div>
+
+            <div class="paper-footer">HANDIFY AI • ASSIGNMENT PREVIEW</div>
+          </article>
+
+          <div class="preview-footnote">
+            This is a visual preview. Review the content before submitting an assignment.
+          </div>
+        </section>
+
+      </div>
+    </section>
+
+    <section class="how-section" id="how-it-works">
+      <div class="eyebrow">SIMPLE BY DESIGN</div>
+      <h2>From text to a page in 3 steps</h2>
+
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-emoji">📝</div>
+          <h3>Add your content</h3>
+          <p>Type or paste your assignment notes into the editor.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-emoji">✍️</div>
+          <h3>Choose your style</h3>
+          <p>Select a handwriting font, paper type, size, and spacing.</p>
+        </div>
+
+        <div class="step-card">
+          <div class="step-emoji">📄</div>
+          <h3>Save as PDF</h3>
+          <p>Print your preview or choose Save as PDF in the browser.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <a class="brand" href="#">
+      <span class="brand-icon">✍</span>
+      <span>Handify <b>AI</b></span>
+    </a>
+    <p>Made for learning and better organized assignments.</p>
+    <span class="footer-copy">© 2026 Handify AI</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
